@@ -8,6 +8,12 @@ app.use(morgan('combined'));
 
 app.use(express.static('public'));
 
+const topMovies = [
+  { title: 'Movie 1', rating: 8.5},
+  { title: 'Movie 2', rating: 9.0},
+  { title: 'Movie 3', rating: 7.0},
+];
+
 app.get('/movies', (req, res) => {
     res.json(topMovies);
 });
